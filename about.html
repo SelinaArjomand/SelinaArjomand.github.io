@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+WRITTEN BY: Selina Arjomand
+EMAIL: sarjoma1@uci.edu
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Selina Arjomand">
+    <meta name="description" content="description of your page">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio Website</title>
+    <script src="https://kit.fontawesome.com/740cf8f3fb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <nav>
+                <img src="images/Portfolio-Logo.png" alt="Logo of initials S.A." class="logo">
+                <ul id="sidemenu">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="images/SelinaArjomand_UX_UI_Resume.pdf" target="_blank">Resume</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="row about-row">
+                <div class="about-col-1">
+                    <h1 class="sub-title">Welcome!</h1>
+                    <p>I'm a junior studying <span>Human-Computer Interaction</span> at the University of California, Irvine. 
+                        I design to enhance the human experience.</p>
+                    <p>Currently, I'm a research assistant at the <span>Design and Partnership Lab</span> exploring gamification of STEM 
+                        through participatory design with the children of Santa Ana.</p>
+                    <p>In my free time, you can catch me reading fantasy books, attempting to cook, cuddling my cats, or going on boba runs :)</p>
+                </div>
+                <div class="about-col-2">
+                    <img src="images/About_portrait_img.png" alt="Selina Arjomand, sitting at table with a drink.">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Created by Selina Arjomand.</p>
+    </div>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+          sidemenu.style.right = "0";
+        }
+        function closemenu(){
+          sidemenu.style.right = "-200px";
+        }
+    </script>
+    
+</body>
+</html>

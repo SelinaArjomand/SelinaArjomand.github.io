@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+WRITTEN BY: Selina Arjomand
+EMAIL: sarjoma1@uci.edu
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Selina Arjomand">
+  <meta name="description" content="description of your page">
+  <link rel="stylesheet" href="style.css">
+  <title>Personal Portfolio Website</title>
+  <script src="https://kit.fontawesome.com/740cf8f3fb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/Portfolio-Logo.png" alt="Logo of initials S.A." class="logo">
+        <ul id="sidemenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="images/SelinaArjomand_UX_UI_Resume.pdf" target="_blank">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>    
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="row home-row">
+        <div class="home-col-1">
+          <div class="header-text">
+            <!-- <p>UX/UI Designer</p> -->
+            <h1><span>Selina Arjomand</span></h1>
+            <p>Hi, I'm a passionate <span>UX/UI Designer</span> who enjoys curating delightful experiences.</p>
+            <p><br>Welcome to my space.</p>
+          </div>
+        </div>
+        <div class="home-col-2">
+          <img src="images/Portfolio_portrait_img.png" alt="Selina Arjomand, smiling. She is a student at UCI majoring in Human-Computer Interaction.">
+        </div>
+      </div>
+      <div class="scrollbtn">
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+    </div>
+  </div>
+  <!------services-------->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">Projects</h1>
+      <div class="services-list">
+        <div class="service">
+          <img src="images/work-1.jpg" alt="phone pic1">
+          <div class="layer2">
+            <!-- <i class="fa-solid fa-code"></i> -->
+            <h2>Playful Learning Landscapes</h2>
+            <p>Unlock a magical world of creatures in this gamification of STEM.</p>
+            <!-- <a href="#">Learn more</a> -->
+          </div>
+        </div>
+        <div class="service">
+          <img src="images/work-2.jpg" alt="phone pic2">
+          <div class="layer2">
+            <!-- <i class="fa-solid fa-crop-simple"></i> -->
+            <h2>Furever Friends</h2>
+            <p>Find the purrfect addition to your family.</p>
+            <!-- <a href="#">Learn more</a> -->
+          </div>
+        </div>
+        <div class="service">
+          <img src="images/work-1.jpg" alt="phone pic1">
+          <div class="layer2">
+            <!-- <i class="fa-brands fa-app-store-ios"></i> -->
+            <h2>Coming soon...</h2>
+            <p>A retail app that will make tracking your favorite stores completely effortless. Designing with Design@UCI for winter quarter 2023.</p>
+            <!-- <a href="#">Learn more</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Created by Selina Arjomand.</p>
+  </div>
+
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link")
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-link")
+      }
+      event.currentTarget.classList.add("active-link")
+      document.getElementById(tabname).classList.add("active-tab")
+    }
+  </script>
+
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+  </script>
+
+  <p>
+    <a href="http://validator.w3.org/check?uri=referer">
+       W3C validator
+    </a>
+  </p>
+</body>
+</html>

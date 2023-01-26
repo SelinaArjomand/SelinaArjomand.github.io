@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #fff;
+    color: #737372;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 15%;                  /*10 px from top/bottom and 10% left/right*/
+}
+
+nav{                   
+    display: flex;
+    align-items: center;                /* aligns items on center vertically */
+    justify-content: space-between;     /* maximizes space between logo and nav links */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 40px;
+}
+
+/* Navigation */
+nav ul li{                              /* Nav list links - makes home, about, resume, contact, have box margin*/
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{                            /* Nav list links - text (home, about, resume, contact)*/
+    color: #737372;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+nav ul li a::after{                     /* Underline*/
+    content: '';
+    width: 0;
+    height: 2px;                        /* underline thickness*/
+    background: #7365F0;
+    position: absolute;
+    left: 0;
+    bottom: -6px;                       /* how far underline is below text*/
+    transition: 0.5s;
+}
+nav ul li a:hover::after{               /* Underline hover animation*/
+    width: 100%;
+}
+.row{
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*------home--------*/
+.home-col-1{
+    width: 50%;
+}
+.home-col-2{
+    width: 50%;
+}
+.header-text{
+    width: 100%;
+    font-weight: lighter;
+    color: #737372;
+    margin-top: 20%;
+    font-size: 21px;
+}
+.header-text h1{
+    color: #0D0D0D;
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.header-text h1 span{
+    color: #7365F0;
+}
+.header-text p span{
+    color: #0D0D0D;
+    font-weight: bolder;
+}
+.home-col-2 img{
+    width: 100%;
+}
+.scrollbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scrollbtn i{
+    font-size: 25px;
+}
+
+/*------about--------*/
+#about{
+    color: #737372;    /*text color*/
+}
+.about-col-1 h1 {
+    padding-right: 10%;
+}
+.about-col-1 p span{
+    color: #7365F0;
+    font-weight: bolder
+}
+.about-col-1 p {
+    font-size: 21px;
+    font-weight: lighter;
+    margin: 15px 0;
+    padding-right: 10%;
+}
+
+.about-col-2 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #0D0D0D;
+}
+
+/*------services--------*/
+#services{
+    padding: 30px 0;
+    padding-bottom: 100px;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.service{
+    color: #fff;
+    border-radius: 10px;
+    position: relative;
+    font-size: 13px;
+    font-weight: 300;
+    transition: transform 0.5s;
+    overflow: hidden;
+}
+.service img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer2{
+    width: 100%;
+    /* height: 100%; */
+    height: 0;
+    background: linear-gradient(#A49DF1, #4429F2);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.service:hover .layer2{
+    height: 100%;
+}
+.service i{ /* i is for item*/
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.service h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.service a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.service:hover{
+    transform: translateY(-10px);
+}
+.service:hover img{
+    transform: scale(1.1);
+}
+
+/*------contact--------*/
+.contact-column{
+    padding: 100px 0;
+    display: block;
+}
+.contact-column h1{
+    text-align: center;
+    color: #0D0D0D;
+}
+form{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #e7e7e7;
+    padding: 15px;
+    margin: 15px 0;
+    color: #0D0D0D;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.btn.btn2{
+    display: flex;
+    color: #fff;
+    background: #7365F0;
+    border-radius: 10px;
+}
+form .btn2{                 /* Submit button inside */
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.contact-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #737372;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.copyright{
+    color: #0D0D0D;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #fff;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+
+/*------css for small screen--------*/
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    .row.home-row{
+        flex-direction: column;
+    }
+    .home-col-1{
+        width: 100%;
+    }
+    .home-col-2{
+        width: 80%;
+    }
+    .row.about-row{
+        flex-direction: column;
+    }
+    .header-text{
+        margin-top: 10%;
+        margin-bottom: 20%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    nav ul li a{                                    /* makes links white */
+        color: #fff;
+    }
+    .fa-solid.fa-xmark{                             /* makes close button white*/
+        color: #fff;
+    }
+    .fa-solid.fa-bars{                              /* makes menu button grey*/
+        color: #737372;
+    }
+    nav ul{
+        background: #7365F0;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 40px;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}

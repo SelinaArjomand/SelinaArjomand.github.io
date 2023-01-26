@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+WRITTEN BY: Selina Arjomand
+EMAIL: sarjoma1@uci.edu
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Selina Arjomand">
+    <meta name="description" content="description of your page">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio Website</title>
+    <script src="https://kit.fontawesome.com/740cf8f3fb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="contact">
+        <div class="container">
+            <nav>
+                <img src="images/Portfolio-Logo.png" alt="rLogo of initials S.A." class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="images/SelinaArjomand_UX_UI_Resume.pdf" target="_blank">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="contact-column">
+                <h1 class="sub-title">Let's Chat</h1>
+                <div class="form-contact">
+                    <form>
+                        <p>Email *</p>
+                        <input type="email" name="Email" placeholder="Your email address" required>
+                        <p>Subject *</p>
+                        <input type="text" name="Subject" placeholder="Your subject" required>
+                        <p>Message *</p>
+                        <textarea name="Message" rows="6" placeholder="Your message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-left">
+                        <p>selina.arj@gmail.com</p>
+                    </div>
+                    <div class="contact-right">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/selinaarjomand/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/selinna_/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Created by Selina Arjomand.</p>
+        </div>
+    </div>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+          sidemenu.style.right = "0";
+        }
+        function closemenu(){
+          sidemenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>
